@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS people;
+
 CREATE TABLE people (
   name VARCHAR(50)
 );

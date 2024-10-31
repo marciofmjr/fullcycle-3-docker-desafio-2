@@ -17,14 +17,13 @@ app.get("/", (req, res) => {
   const name = "Marcio " + new Date().toISOString();
 
   connection.query(`INSERT INTO people (name) VALUES ('${name}')`);
-
   connection.query(`SELECT name FROM people`, (error, results, fields) => {
     res.send(`
       <h1>Full Cycle Rocks!</h1>
       <ol>
         ${
           !!results?.length
-            ? results.map((el) => `<li>${el.nome}</li>`).join("")
+            ? results.map((el) => `<li>${el.name}</li>`).join("")
             : ""
         }
       </ol>
