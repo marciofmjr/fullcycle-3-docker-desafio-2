@@ -18,8 +18,11 @@ services:
       context: ./node
     depends_on:
       - db
+    tty: true
     networks:
       - fullcycle-network
+    volumes:
+      - ./node/src:/app/src
 
   db:
     build:

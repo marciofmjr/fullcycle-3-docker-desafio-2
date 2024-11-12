@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
   connection.query(`INSERT INTO people (name) VALUES ('${name}')`);
   connection.query(`SELECT name FROM people`, (error, results, fields) => {
     res.send(`
-      <h1>Full Cycle Rocks!</h1>
+      <h1>Full Cycle Rocks!!!!!!!!!!!!!!</h1>
       <ol>
         ${
           !!results?.length
