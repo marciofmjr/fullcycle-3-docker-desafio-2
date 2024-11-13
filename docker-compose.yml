@@ -24,6 +24,7 @@ services:
       - fullcycle-network
     volumes:
       - ./node:/app
+      - /app/node_modules
 
   db:
     build:
